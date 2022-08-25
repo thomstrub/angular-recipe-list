@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { RecipeDetailComponent } from './components/recipeDetail/recipeDetail.component';
-import { RecipeItemComponent } from './components/recipeItem/recipeItem.component';
-import { RecipeListComponent } from './components/recipeList/recipeList.component';
+import { RecipeDetailComponent } from './components/recipes/recipeDetail/recipeDetail.component';
+import { RecipeItemComponent } from './components/recipes/recipeItem/recipeItem.component';
+import { RecipeListComponent } from './components/recipes/recipeList/recipeList.component';
 import { ShoppingListComponent } from './components/shoppingList/shoppingList.component';
 import { ShoppingListEditComponent } from './components/shopping-list-edit/shopping-list-edit.component';
 
