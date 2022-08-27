@@ -5,7 +5,15 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <a href="#" 
+        <app-recipeItem
+        *ngFor="let recipe of recipes" 
+        [recipe]="recipe"
+        >
+        </app-recipeItem>
+
+        <!-- this code vvv was moved to recipeItem - binding component data -->
+        
+        <!-- <a href="#" 
         class="list-group-item clearfix"
         *ngFor="let recipe of recipes" 
         >
@@ -16,6 +24,6 @@
             <span class="pull-right">
                 <img [src]="recipe.imagePath" alt="" class="img-responsive" style="max-height: 50px;">
             </span>
-        </a>
+        </a> -->
     </div>
 </div>
