@@ -1,16 +1,16 @@
 <div class="container-fluid">
     
         <div class="row">
-            <app-header></app-header>
+            <app-header (currentPage)="onPageEvent($event)"></app-header>
         </div>
         <div class="container">
 
-            <div class="row">
+            <div class="row" *ngIf="this.currentPage === 'recipes'">
                 <div class="col-md-12">
                     <app-recipes></app-recipes>     
                 </div>
             </div>
-            <div class="row">
+            <div class="row" *ngIf="this.currentPage === 'shopping'">
                 <div class="col-md-12">
                     <app-shoppingList></app-shoppingList>     
                 </div>
