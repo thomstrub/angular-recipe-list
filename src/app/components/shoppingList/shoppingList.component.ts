@@ -11,5 +11,8 @@ export class ShoppingListComponent {
         new Ingredient('Apples', 5),
         new Ingredient('Tomatoes', 10)
     ];
-
+    onInputSubmit(formData: Ingredient){
+        console.log(formData, " <--- formData");
+        this.ingredients.push(formData);
+    }
 }
