@@ -1,4 +1,5 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Recipe } from "../recipe.model";
 
 @Component({
     selector: 'app-recipeItem',
@@ -9,4 +10,9 @@ export class RecipeItemComponent {
     // Angular keeps classes comparmentalized- you have to make something available with a decorator
     // you can pass an alias in using the brackets- using an alias here of recipeItem - recipeList will now need to bind to this alias
     @Input('recipeItem') recipe: {name: string, description: string, imagePath: string};
+    @Output() selectedRecipe = new EventEmitter<Recipe>();
+    onRecipeSelect(){
+        console.log('recipe select');
+        this.selectedRecipe.emit(this.recipe);
+    }
 }

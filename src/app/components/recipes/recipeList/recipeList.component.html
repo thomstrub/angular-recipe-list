@@ -8,6 +8,7 @@
         <app-recipeItem
         *ngFor="let recipe of recipes" 
         [recipeItem]="recipe"
+        (selectedRecipe)="handleSelectedRecipe($event)"
         >
         </app-recipeItem>
 
